@@ -5,6 +5,8 @@ import "@shoelace-style/shoelace/dist/components/card/card.js";
 import "@shoelace-style/shoelace/dist/components/range/range.js";
 import "@shoelace-style/shoelace/dist/components/select/select.js";
 import "@shoelace-style/shoelace/dist/components/option/option.js";
+import "@shoelace-style/shoelace/dist/components/radio-group/radio-group.js";
+import "@shoelace-style/shoelace/dist/components/radio-button/radio-button.js";
 import type { ItkViewer2d } from "@itk-viewer/element/itk-viewer-2d.js";
 import "@itk-viewer/element/itk-viewer-2d.js";
 import { ZarrMultiscaleSpatialImage } from "@itk-viewer/io/ZarrMultiscaleSpatialImage.js";
@@ -27,7 +29,7 @@ export function ViewerClient({ imagePath }: { imagePath: string }) {
   return (
     <itk-viewer-2d
       ref={viewer}
-      style={{ width: "100%", height: "100%" }}
+      style={{ width: "100%", height: "100%", display: "flex" }}
     ></itk-viewer-2d>
   );
 }

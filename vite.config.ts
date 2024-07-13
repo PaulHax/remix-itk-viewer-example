@@ -1,7 +1,6 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   plugins: [
@@ -13,18 +12,9 @@ export default defineConfig({
       },
     }),
     tsconfigPaths(),
-    // collect lazy loaded JavaScript and Wasm bundles
-    viteStaticCopy({
-      targets: [
-        {
-          src: "node_modules/@itk-viewer/blosc-zarr/emscripten-build/*",
-          dest: "pipelines",
-        },
-      ],
-    }),
   ],
   optimizeDeps: {
-    exclude: ["@itk-viewer/io"],
+    exclude: ["itk-wasm", "@itk-viewer/io"],
     include: ["@itk-viewer/io > p-queue"],
   },
 });

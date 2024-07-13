@@ -11,8 +11,9 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <div style={{ width: "100%", height: "300px" }}>
-        <Viewer imagePath="https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.3/idr0079A/9836998.zarr" />
+      <div style={{ width: "100%", height: "800px" }}>
+        <Viewer imagePath="https://dandiarchive.s3.amazonaws.com/zarr/7723d02f-1f71-4553-a7b0-47bda1ae8b42" />
+        {/* <Viewer imagePath="https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.3/idr0079A/9836998.zarr" /> */}
       </div>
       <h1>Welcome to Remix</h1>
       <ul>
